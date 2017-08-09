@@ -33,30 +33,12 @@ h2 {
 /* ----------------------------------------
 Grid System
 ------------------------------------------- */
-
-.col-2-3 {
-  flex-basis: 65%;
-}
-.col-1-3 {
-  flex-basis: 30%;
-}
-.col-1-2 {
-  flex-basis:49%;
-}
-.col-2 {
-  flex-basis: 20%;
-}
 .col-1-4 {
   flex-basis: 15%;
 }
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 15px;
-  justify-content: space-between;
-  color: #193441;
+.col-1-2 {
+  flex-basis: 50%;
 }
-
 .grid-wrapper {
 	display: flex;
 	flex-wrap: wrap;
@@ -81,6 +63,7 @@ nav li a {
   color: #AAC7B8;
   font-size: 18px;
   font-weight: 400;
+  z-index: 100;
 }
 nav li a:hover {
   color: #703030;
@@ -151,7 +134,7 @@ nav ul {
 
 
 /* ----------------------------------------
-About
+Home Page - About
 ------------------------------------------- */
 .about {
   background-image: url('../img/texture2.jpg');
@@ -180,7 +163,10 @@ About
 }
 .intro img {
   float: right;
-  margin-bottom: 150px;
+  position: relative;
+  top: -153px;
+  left: -180px;
+
 }
 
 /* ----------------------------------------
@@ -282,6 +268,7 @@ footer {
 }
 .info-footer {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   font-size: 12px;
 }
@@ -289,7 +276,61 @@ footer {
   margin: 0;
 }
 
-
+/* ----------------------------------------
+About Blue Dragon
+------------------------------------------- */
+.aboutbd-about {
+  display: block;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+.aboutbd-row {
+  display: flex;
+}
+#blue-ginger {
+  background-color: #D1DBBD;
+  padding: 10px;
+}
+#blue-ginger p {
+  margin: 25px;
+  color: #193441;
+}
+#blue-ginger h2 {
+  color: #193441;
+}
+#blue-ginger-img {
+  background-color: #AAC7B8;
+}
+.top-image {
+  margin-top: 150px;
+}
+#gift-card {
+  background-color: #D1DBBD;
+  padding: 10px;
+}
+#gift-card h2 {
+  color: #193441;
+  margin-top: 60px;
+}
+#gift-card p {
+  color: #193441;
+  margin: 25px;
+}
+#gift-card-img {
+  background-color: #AAC7B8;
+}
+#delivery {
+  background-color: #D1DBBD;
+}
+#delivery-img {
+  background-color: #AAC7B8;
+}
+#catering {
+  background-color: #D1DBBD;
+}
+#catering-img {
+  background-color: #AAC7B8;
+}
 /* ----------------------------------------
 About Ming
 ------------------------------------------- */
@@ -317,16 +358,6 @@ About Ming
 }
 
 /* ----------------------------------------
-Blue Ginger
-------------------------------------------- */
-#ginger-header {
-  font-size: 20px;
-  font-weight: 700;
-}
-#image-edit {
-  margin-top: 70px;
-}
-/* ----------------------------------------
 Reservation SideBar
 ------------------------------------------- */
 .sidebar {
@@ -335,18 +366,6 @@ Reservation SideBar
 }
 .active {
   transform: translateX(0px);
-}
-/* ----------------------------------------
-Gallery
-------------------------------------------- */
-
-.wrap h2 {
-  text-align: center;
-  margin-top: 0;
-  color: #D1DBBD;
-}
-.grid-wrapper {
-  padding: 20px;
 }
 
 /* ----------------------------------------
