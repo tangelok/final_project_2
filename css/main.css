@@ -47,7 +47,7 @@ Grid System
   flex-basis: 20%;
 }
 .col-1-4 {
-  flex-basis: 49%;
+  flex-basis: 15%;
 }
 .row {
   display: flex;
@@ -133,7 +133,7 @@ About
   background-size: cover;
   background-attachment: fixed;
   color: #193441;
-  padding: 200px;
+  padding: 180px;
 }
 .about h2 {
   margin-bottom: 0;
@@ -153,50 +153,50 @@ About
   margin-bottom: 0;
   font-size: 15px;
 }
-#stacked {
-  display: flex;
+.intro img {
+  float: right;
+  margin-bottom: 100px;
 }
 
 /* ----------------------------------------
 Menu
 ------------------------------------------- */
+.menu {
+  background-image: url('../img/dan-dan.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  padding: 200px;
+}
+.menu h2 {
+  color: #193441;
+  font-size: 68px;
+  letter-spacing: 10px;
+}
+.view-menu {
+  border: 2px solid #4E798C;
+  padding: 8px 25px 8px 25px;
+  background-color: transparent;
+  font-size: 17px;
+  color: #193441;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: 'Oswald', sans-serif;
+}
 
-
-
-/* ----------------------------------------
-Gallery
-------------------------------------------- */
-.gallery {
-  color: #FCFFF5;
-  padding: 105px 30px;
-  background-color: #91AA9D;
-  display: flex;
-  flex-wrap: wrap;
-}
-.image-wrapper a:visited {
-  color: #D1DBBD;
-}
-.gallery a {
-  text-decoration: none;
-}
-.gallery h3 {
-  text-align: center;
-}
-.gallery img:hover {
-  opacity: 0.5;
-}
 
 /* ----------------------------------------
 Exclusive
 ------------------------------------------- */
 .exclusive {
   background-color: #3E606F;
-  color: #91AA9D;
+  color: #A5C2B3;
   padding: 100px;
 }
 .exclusive h2 {
   margin-bottom: 0;
   text-align: center;
+  font-size: 50px;
 }
 .exclusive h3 {
   margin-bottom: 0;
@@ -236,9 +236,8 @@ footer {
 .social-links a {
 	font-size: 30px;
 	padding: 15px;
-  margin-top: 20px;
-  margin-bottom: 50px;
 	display: inline-block;
+  justify-content: center;
 	color: #193441;
 }
 .social-links a:hover {
@@ -249,6 +248,7 @@ footer {
 }
 .info-footer {
   display: flex;
+  justify-content: center;
   font-size: 12px;
 }
 .footer .col-1-4 {
