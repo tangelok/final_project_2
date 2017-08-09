@@ -78,8 +78,9 @@ nav li {
 }
 nav li a {
   text-decoration: none;
-  color: #FCFFF5;
+  color: #AAC7B8;
   font-size: 18px;
+  font-weight: 400;
 }
 nav li a:hover {
   color: #703030;
@@ -102,16 +103,16 @@ img {
   display: block;
   margin: 0 auto;
 }
-nav {
-  top: 100;
-  left: 0;
-  right: 0;
-  z-index: 100;
-}
 nav ul {
   text-align: center;
   margin: 0;
-  background-color: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #3E606F;
+  padding: 0;
+  opacity: 0.9;
 }
 .hamburger {
   display: none;
@@ -123,6 +124,30 @@ nav ul {
 .hamburger:hover {
   color: #8E2800;
 }
+.header-reservations {
+  border: 2px solid #193441;
+  padding: 5px 30px 5px 30px;
+  background-color: #D1DBBD;
+  font-size: 17px;
+  color: #193441;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: 'Oswald', sans-serif;
+  opacity: 0.9;
+}
+.header-reservations:hover {
+  background-color: #703030;
+  color: #D1DBBD;
+  border: 2px solid #703030;
+}
+.logo {
+  float: left;
+  margin-left: 25px;
+}
+.nav-reservations {
+  border: 2px solid #703030;
+  padding: 5px 10px 5px 10px;
+}
 
 
 /* ----------------------------------------
@@ -133,7 +158,7 @@ About
   background-size: cover;
   background-attachment: fixed;
   color: #193441;
-  padding: 180px;
+  padding: 200px;
 }
 .about h2 {
   margin-bottom: 0;
@@ -155,6 +180,7 @@ About
 }
 .intro img {
   float: right;
+  margin-bottom: 150px;
 }
 
 /* ----------------------------------------
