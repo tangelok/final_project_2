@@ -78,11 +78,11 @@ nav li {
 }
 nav li a {
   text-decoration: none;
-  color: #D1DBBD;
+  color: #FCFFF5;
   font-size: 18px;
 }
 nav li a:hover {
-  color: #8E2800;
+  color: #703030;
 }
 header {
   background-image: url('../img/restaurant.jpg');
@@ -103,7 +103,7 @@ img {
   margin: 0 auto;
 }
 nav {
-  top: 0;
+  top: 100;
   left: 0;
   right: 0;
   z-index: 100;
@@ -155,7 +155,6 @@ About
 }
 .intro img {
   float: right;
-  margin-bottom: 100px;
 }
 
 /* ----------------------------------------
@@ -174,14 +173,20 @@ Menu
   letter-spacing: 10px;
 }
 .view-menu {
-  border: 2px solid #4E798C;
-  padding: 8px 25px 8px 25px;
-  background-color: transparent;
+  border: 2px solid #193441;
+  padding: 5px 30px 5px 30px;
+  background-color: #D1DBBD;
   font-size: 17px;
   color: #193441;
   font-weight: 700;
   text-transform: uppercase;
   font-family: 'Oswald', sans-serif;
+  opacity: 0.9;
+}
+.view-menu:hover {
+  background-color: #703030;
+  color: #D1DBBD;
+  border: 2px solid #703030;
 }
 
 
@@ -212,6 +217,9 @@ Exclusive
 .exclusive p {
   text-align: center;
   margin: 0 55px 30px 55px;
+}
+.grat {
+  font-size: 12px;
 }
 
 
