@@ -34,7 +34,7 @@ h2 {
 Grid System
 ------------------------------------------- */
 .col-1-4 {
-  flex-basis: 24%;
+  flex-basis: 20%;
 }
 .col-1-2 {
   flex-basis: 50%;
@@ -485,7 +485,7 @@ About Ming
 #simplyming-aside {
   margin-left: 20px;
 }
-#simplyming-aside img {
+#simplyming img {
   height: 100px;
   width: 100px;
 }
@@ -493,22 +493,32 @@ About Ming
   display: flex;
   flex-wrap: wrap;
   padding: 30px;
+  background-color: #D1DBBD;
+  color: #193441;
 }
 #aboutming-foodwine .text {
-  margin: 50px 70px 50px 70px;
+  margin: 50px 80px 70px 80px;
 }
-#aboutming-food-aside {
-  margin-right: 10px;
+#aboutming-foodwine h2 {
+  font-size: 59px;
+  text-align: center;
 }
 #aboutming-recipes h2 {
-  font-size: 24px;
+  font-size: 28px;
+  margin-bottom: 0;
+  letter-spacing: 7px;
 }
 #aboutming-recipes h3 {
   font-size: 16px;
 }
+#aboutming-recipes h4 {
+  font-size: 12px;
+  margin-top: 0;
+  margin-bottom: 35px;
+}
 #aboutming-recipes-images {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-wrap: wrap;
 }
 /* ----------------------------------------
