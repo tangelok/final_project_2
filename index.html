@@ -11,6 +11,7 @@
         <link rel="shortcut icon" href="favicon-copy.ico" type="image/x-icon" />
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
+
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
     </head>
@@ -26,8 +27,24 @@
             <li><a href="contact.html">Contact</a></li>
             <li class="nav-reservations"><a href="#">Reservations</a></li>
           </ul>
-            <a class="hamburger" href=""><i class="fa fa-bars"></i></a>
         </nav>
+        <div class="hamburger">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+        <div class="side-nav" id="nav-sidebar">
+          <a href="#" class="exit">x</a>
+          <h2>Menu</h2>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="aboutbd.html">About Blue Dragon</a></li>
+            <li><a href="aboutming.html">About Ming</a></li>
+            <li><a href="http://www.mingspantry.com/">Store</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+          </div>
         <h2><button class="header-reservations">Reservations</button></h2>
     </header>
     <main>
@@ -35,9 +52,10 @@
       <div class="intro">
           <h2>Blue Dragon</h2>
           <h4>An Asian Gastropub</h4>
+          <p>Located in the heart of Fort Point Channel, Blue Dragon is a comfortable, neighborhood place to simply hang out, have a drink and enjoy some incredible food. The tapas-style menu adds Ming's East West twist to many pub favorites. The bar is well-stocked with a number of craft beers, worldly wines, premium sakes and signature cocktails. </p>
           <img src="img/bd-logo.png" alt="blue-dragon-logo">
       </div>
-          <p>Located in the heart of Fort Point Channel, Blue Dragon is a comfortable, neighborhood place to simply hang out, have a drink and enjoy some incredible food. The tapas-style menu adds Ming's East West twist to many pub favorites. The bar is well-stocked with a number of craft beers, worldly wines, premium sakes and signature cocktails. </p>
+
     </section>
     <section class="awards">
         <img src="img/zagat.jpg" alt="zagat">
@@ -46,7 +64,7 @@
     </section>
     <section class="menu">
         <h2>Menu</h2>
-        <p><button class="view-menu"><a href="menu.html">See Menu</a></button></p>
+        <p><button class="view-menu">See Menu</button></p>
     </section>
     <section class="exclusive">
       <h2>Exclusive Chef's Table</h2>
@@ -88,8 +106,10 @@
       </div>
     </div>
     <p class="copyright">&copy; Copyright 2017 Ming Tsai</p>
-        <iframe src="https://www.opentable.com/r/blue-dragon-reservations-boston?restref=251797&lang=en" height="700px" frameborder="0"></iframe>
-
+    <div class="opentable" id="sidebar">
+        <!-- <p>X</p> -->
+        <iframe src="https://www.opentable.com/r/blue-dragon-reservations-boston?restref=251797&lang=en" height="625px" width="400px" frameborder="0"></iframe>
+    </div>
   </footer>
         <script src="js/vendor/jquery-1.12.0.min.js"></script>
         <script src="js/main.js"></script>

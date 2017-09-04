@@ -36,20 +36,29 @@ Grid System
 .col-1-4 {
   flex-basis: 20%;
 }
-.col-1-2 {
-  flex-basis: 49%;
+.col-1-2-sm {
+  flex-basis: 48%;
 }
 .col-2-3 {
-  flex-basis: 65%;
+  flex-basis: 64.5%;
 }
 .col-1-3 {
-  flex-basis: 33%;
+  flex-basis: 33.3%;
 }
 .col-5-6 {
   flex-basis: 83%;
 }
 .col-1-6 {
   flex-basis: 16%;
+}
+.col-1-5 {
+  flex-basis: 19%;
+}
+.col-1-3-sm {
+  flex-basis: 19%;
+}
+.col-1-2 {
+  flex-basis: 50%;
 }
 
 .grid-wrapper {
@@ -112,13 +121,57 @@ nav ul {
 }
 .hamburger {
   display: none;
-	font-size: 20px;
+	font-size: 45px;
 	margin: 10px 0;
 	padding-left: 20px;
-  color: #193441;
+  color: #703030;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 .hamburger:hover {
-  color: #8E2800;
+  color: #D1DBBD;
+}
+
+.side-nav {
+  transform: translateX(-300px);
+  transition: all 350ms ease-in-out;
+}
+.open {
+  transform: translateX(0px);
+}
+#nav-sidebar {
+  width: 300px;
+  height: 100%;
+  background-color:#703030;
+  color: #3E606F;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 20px 0;
+}
+#nav-sidebar ul {
+  color: #D1DBBD;
+}
+#nav-sidebar li a {
+  text-decoration: none;
+  color: #D1DBBD;
+}
+#nav-sidebar li a:hover {
+  text-decoration: none;
+  color: #FCFFF5;
+}
+#nav-sidebar h2 {
+  color: #D1DBBD;
+}
+.exit {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    text-transform: none;
+    font-size: 20px;
+    text-decoration: none;
+    color: #D1DBBD;
 }
 .header-reservations {
   border: 2px solid #193441;
@@ -147,6 +200,14 @@ nav ul {
 .selected-page {
   color: #703030;
 }
+.line {
+  border-bottom: 4px solid #bbb;
+  width: 35px;
+  margin-bottom: 6px;
+}
+.line:last-child {
+  margin-bottom: 0;
+}
 
 
 /* ----------------------------------------
@@ -174,15 +235,12 @@ Home Page - About
   margin-bottom: 60px;
 }
 .about p {
-  margin-bottom: 0;
+  margin-bottom: 50px;
   font-size: 15px;
+  margin-top: 0;
 }
 .intro img {
-  float: right;
-  position: relative;
-  top: -153px;
-  left: -180px;
-
+  text-align: center;
 }
 
 /* ----------------------------------------
@@ -200,7 +258,7 @@ Awards Bar
 }
 
 /* ----------------------------------------
-Menu
+Menu----
 ------------------------------------------- */
 .menu {
   background-image: url('../img/dan-dan.jpg');
@@ -230,6 +288,7 @@ Menu
   color: #D1DBBD;
   border: 2px solid #703030;
 }
+
 
 
 /* ----------------------------------------
@@ -302,6 +361,12 @@ footer {
   justify-content: center;
   font-size: 12px;
 }
+.info-footer a {
+  text-decoration: none;
+  color: #193441;
+  font-weight: bold;
+  font-size: 1.17em;
+}
 .footer .col-1-6 {
   margin: 0;
 }
@@ -309,6 +374,14 @@ footer {
 /* ----------------------------------------
 About Blue Dragon
 ------------------------------------------- */
+.aboutbd-header {
+  background-image: url('../img/fort-point.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: top;
+  padding: 180px;
+  color: #FCFFE6;
+}
 .aboutbd-about {
   display: block;
   align-items: stretch;
@@ -319,48 +392,81 @@ About Blue Dragon
 }
 #blue-ginger {
   background-color: #D1DBBD;
-  padding: 10px;
-  padding-bottom: 50px;
+  padding: 70px;
 }
 #blue-ginger p {
-  margin: 25px;
   color: #193441;
+  font-size: 18px;
+  font-weight: 200;
+  line-height: 2;
+  text-align: left;
+}
+#blue-ginger li {
+  text-align: left;
+  font-weight: 400;
+  color: #193441;
+
 }
 #blue-ginger h2 {
   color: #193441;
+  text-align: left;
 }
 #blue-ginger-img {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   background-color: #AAC7B8;
+  padding: 0;
+  margin: 0;
 }
-.top-image {
-  margin-top: 150px;
+#left-image {
+  margin-right: 15px;
+}
+.bg-grid {
+  width: 250px;
 }
 #gift-card {
   background-color: #D1DBBD;
-  padding: 10px;
-  padding-bottom: 50px;
+  padding: 70px;
 }
 #gift-card h2 {
   color: #193441;
-  margin-top: 60px;
+  text-align: left;
 }
 #gift-card p {
   color: #193441;
-  margin: 25px;
+  line-height: 2;
+  text-align: left;
+}
+#giftcard button {
+  text-align: center;
+  color: #193441;
 }
 #gift-card-img {
   background-color: #AAC7B8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 #delivery {
   background-color: #D1DBBD;
   padding: 50px;
   padding-bottom: 50px;
 }
+.delivery-header {
+  margin-bottom: 70px;
+}
 #delivery h2 {
   color: #193441;
+  font-size: 55px;
 }
 #delivery p {
   color: #193441;
+  font-size: 17px;
+  line-height: 1;
 }
 #delivery a {
   color: #193441;
@@ -369,8 +475,23 @@ About Blue Dragon
   text-align: left;
   text-decoration: none;
 }
+#delivery a:hover {
+  color: #703030;
+}
 #delivery-img {
   background-color: #AAC7B8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+#delivery-img img {
+  height: 200px;
+  padding: 0;
+  margin: 0;
+}
+#delivery img {
+  margin: 0;
 }
 #catering {
   background-color: #D1DBBD;
@@ -379,19 +500,25 @@ About Blue Dragon
 }
 #catering h2 {
   color: #193441;
+  margin: 20px;
 }
 #catering h4 {
   color: #193441;
+  font-weight: 400;
+    margin: 20px;
 }
 #catering p {
   color: #193441;
   margin: 25px;
+  line-height: 2;
+    margin: 20px;
 }
 #catering ul {
   color: #193441;
   font-family: 'Slabo 27px', serif;
   text-transform: none;
   text-align: left;
+    margin: 20px;
 }
 #catering button {
   border: 2px solid #193441;
@@ -404,27 +531,36 @@ About Blue Dragon
   font-family: 'Oswald', sans-serif;
   opacity: 0.9;
 }
+#catering a {
+  color: #193441;
+  text-decoration: none;
+}
 #catering button:hover {
   background-color: #703030;
-  color: #D1DBBD;
   border: 2px solid #703030;
+}
+#catering button:hover a {
+  color: #D1DBBD;
 }
 #catering-img {
   background-color: #AAC7B8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* ----------------------------------------
 About Ming
 ------------------------------------------- */
-/*#aboutming-header {
-  background-image: url('../img/fort-point.jpg');
+.aboutming-header {
+  padding: 190px;
+  background-image: url('../img/plating.jpg');
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
-  padding: 50px;
-}*/
+}
 #aboutming {
-  background-image: url('../img/texture2.jpg');
+  background-image: url('../img/texture.jpg');
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
@@ -434,13 +570,18 @@ About Ming
 #aboutming h2 {
   text-align: center;
   letter-spacing: 7px;
+  margin-top: 0;
+  margin-bottom: 70px;
+}
+#aboutming img {
+  margin-top: 50px;
 }
 #aboutming-links {
   background-color: #3E606F;
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
-  padding: 55px 70px 55px 70px;
+  padding: 55px 150px 55px 150px;
   color: #AAC7B8;
 }
 #aboutming-links a {
@@ -457,15 +598,16 @@ About Ming
 #aboutming-exclusive {
   display: flex;
   flex-wrap: wrap;
-  background-image: url('../img/plating.jpg');
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
 }
 #aboutming-blueginger {
   background-color: #D1DBBD;
   padding: 20px;
   color: #193441;
+}
+#aboutming-blueginger a {
+  color: #193441;
+  text-decoration: none;
+  font-size: 14px;
 }
 #aboutming-bluedragon {
   background-color: #AAC7B8;
@@ -480,104 +622,312 @@ About Ming
 #simplyming {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   padding: 60px;
-  background-image: url('../img/texture2.jpg');
+  background-image: url('../img/texture.jpg');
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
   color: #193441;
-  margin-right: 20px;
+}
+.search {
+  border: 2px solid #193441;
+  padding: 2.5px 15px 2.5px 15px;
+  background-color: #D1DBBD;
+  font-size: 14px;
+  color: #193441;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: 'Oswald', sans-serif;
+  opacity: 0.9;
+}
+.search:hover {
+  background-color: #703030;
+  color: #D1DBBD;
+  border: 2px solid #703030;
 }
 #simplyming-aside {
   margin-left: 20px;
+}
+#simplyming-aside p a {
+  text-decoration: none;
+  color: #193441;
+}
+#simplyming-aside p a:hover {
+  color: #703030;
 }
 #simplyming img {
   height: 100px;
   width: 100px;
 }
-#aboutming-foodwine {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 30px;
-  background-color: #D1DBBD;
-  color: #193441;
-}
-#aboutming-foodwine .text {
-  margin: 50px 80px 70px 80px;
-}
-#aboutming-foodwine h2 {
-  font-size: 59px;
-  text-align: center;
-}
-#aboutming-recipes h2 {
-  font-size: 28px;
-  margin-bottom: 0;
-  letter-spacing: 7px;
-}
-#aboutming-recipes h3 {
-  font-size: 16px;
-}
-#aboutming-recipes h4 {
-  font-size: 12px;
-  margin-top: 0;
-  margin-bottom: 35px;
-}
-#aboutming-recipes-images {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
+
 /* ----------------------------------------
 Reservation SideBar
 ------------------------------------------- */
-.sidebar {
-  transform: translateX(300px);
-  transition: all 350ms ease-in-out;
-}
-.active {
-  transform: translateX(0px);
-}
 .close {
-  transform: translateX(300px);
+  top: 10px;
+  right: 50px;
+  z-index: 100;
 }
 .opentable {
   position: absolute;
-  right: -300px;
+  right: -400px;
+  top: 0;
+  transition: .75s ease-in-out;
+}
+
+.sidebar {
+  right: 0px;
+  position: fixed;
+}
+iframe {
+  position: relative;
+}
+#sidebar p {
+  position: absolute;
+  bottom: 20px;
+  z-index: 100;
 }
 
 /* ----------------------------------------
 Contact
 ------------------------------------------- */
 .directions-main {
-  display: flex;
-  flex-wrap: wrap;
   background-color: #193441;
   padding: 50px 25px 50px 25px;
   color: #D1DBBD;
 }
+.directions {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+.directions h3 {
+  color: #D1DBBD;
+}
 #driving-directions {
   margin-left: 15px;
-  margin-right: 5px;
+  margin-right: 0;
 }
+.contact {
+  background-image: url('../img/south-station.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: bottom;
+  padding: 180px;
+}
+.contact h2 {
+  font-size: 72px;
+  letter-spacing: 8px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #FCFFF5;
+}
+.contact h3 {
+  margin: 0 0 50px 0;
+  font-size: 36px;
+  color: #FCFFF5;
+}
+.contact h4 {
+  color: #FCFFF5;
+}
+.parking {
+  display: flex;
+  flex-wrap: wrap;
+}
+.parking p {
+  margin: 30px 25px 0 25px;
+  line-height: 1.5;
+}
+.reservations {
+  background-image: url('../img/texture.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: bottom;
+  padding: 120px;
+  color: #193441;
+}
+.reservations h2 {
+  margin-bottom: 100px;
+}
+.hours {
+  display: flex;
+  flex-wrap: wrap;
+  line-height: 2;
+}
+.hours h4 {
+  font-size: 20px;
+}
+/* ----------------------------------------
+Menu
+------------------------------------------- */
+.menu-header {
+  background-image: url('../img/friedchicken1.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  padding: 180px;
+  margin-bottom: 0;
+  color: #193441;
+}
+.menu-header h2 {
+  color: #193441;
+  font-size: 68px;
+  letter-spacing: 10px;
+}
+.menu-container {
+  background-color: #3E606F;
+  color: #AAC7B8;
+}
+.menu-container h2 {
+  letter-spacing: 7px;
+  margin-bottom: 0;
+}
+.menu-container p {
+  margin: 0 0 70px 0;
+  padding: 0;
+}
+.nav-menu-tabs {
+  padding-bottom: 40px;
+  padding-top: 60px;
+  margin-top: 0;
+}
+.nav-menu-tabs li {
+  display: inline-block;
+  flex-wrap: wrap;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: #AAC7B8;
+  font-weight: 400;
+  z-index: 100;
+  border: 3px solid #703030;
+  padding: 10px 30px 10px 30px;
+  font-size: 22px;
+}
+.nav-menu-tabs li:hover {
+  color: #703030;
+  background-color: #3E606F;
+}
+#menu1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 25px;
+  display: none;
+}
+#menu1 h4 {
+  letter-spacing: 1px;
+}
+#menu2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 25px;
+  display: none;
+}
+#menu2 h4 {
+  letter-spacing: 1px;
+}
+#menu3 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 25px;
+  display: none;
+}
+#menu3 h4 {
+  letter-spacing: 1px;
+}
+#menu4 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 25px;
+  display: none;
+}
+#menu4 h4 {
+  letter-spacing: 1px;
+}
+#menu5 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 25px;
+  display: none;
+}
+#menu5 h4 {
+  letter-spacing: 1px;
+}
+.catering-row {
+  display: block;
+}
+.allergy {
+  background-image: url('../img/texture.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  padding: 100px;
+  color: #193441;
+}
+.fade-in-active {
+  transition: all 350ms ease-in-out;
+  display: flex !important;
+}
+.allergy h2 {
+  margin-top: 0;
+  margin-bottom: 100px;
+}
+.allergy p {
+  margin: 0 50px 30px 50px;
+}
+.sides {
+  line-height: 0;
+  margin-bottom: 0;
+}
+.selected-tab {
+  background-color: #703030;
+}
+
 /* ----------------------------------------
 Media Queries
 ------------------------------------------- */
 
-@media screen and (max-width: 970px) {
-  #lunch {
-    display: block;
+@media screen and (max-width: 720px) {
+  .about h2  {
+    font-size: 45px;
+  }
+  .about h4 {
+    font-size: 16px;
+  }
+  .exclusive h2 {
+    font-size: 45px;
+  }
+  .exclusive h3 {
+    font-size: 16px;
+  }
+  .exclusive h4 {
+    font-size: 12px;
+  }
+  .submit {
+    margin-top: 10px;
+  }
+  .nav-menu-tabs li {
+    font-size: 18px;
+  }
+  .col-1-6 {
+    flex-basis: 33%;
+  }
+  .col-1-3 {
     flex-basis: 100%;
   }
-  #dinner {
-    display: block;
+  .col-2-3 {
     flex-basis: 100%;
   }
-  #tiki {
-    display: block;
+  .col-1-2 {
     flex-basis: 100%;
   }
 }
-@media screen and (max-width: 660px) {
+@media screen and (max-width: 560px) {
 	.hamburger {
 		display: block;
 		text-align: center;
@@ -588,36 +938,37 @@ Media Queries
 	footer input {
 		margin: 0;
 	}
-  .about {
-    display: block;
-    text-align: center;
+  .awards {
+    display: none;
   }
-  #lunch {
-    display: block;
-    flex-basis: 100%;
+  .menu {
+    padding: 100px;
   }
-  #dinner {
-    display: block;
-    flex-basis: 100%;
+  .exclusive {
+    padding: 70px;
   }
-  #tiki {
-    display: block;
-    flex-basis: 100%;
+  .exclusive h2 {
+    font-size: 40px;
   }
-  .image-wrapper {
-    display: block;
-    flex-basis: 100%;
+  .exclusive h3 {
+    display: none !important;
   }
-  .col-2-3 {
-    display: block;
-    flex-basis: 100%;
+  .exclusive h4 {
+    display: none !important;
   }
-  .col-1-3 {
-    display: block;
-    flex-basis: 100%;
-    text-align: center;
+  .col-1-6 {
+    flex-basis: 50%;
   }
-  .col-1-3 h3 {
-    text-align: center;
+  #blue-ginger-img {
+    display: none;
+  }
+  #gift-card-img {
+    display: none;
+  }
+  #delivery-img {
+    display: none;
+  }
+  #catering-img {
+    display: none;
   }
 }
